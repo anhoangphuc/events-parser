@@ -1,0 +1,808 @@
+{
+    "_format": "hh-sol-artifact-1",
+    "contractName": "TraitsFactoryDiamondGenerated",
+    "sourceName": "hardhat-diamond-abi/HardhatDiamondABI.sol",
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "traitAddress",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "collectionName",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "collectionSymbol",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "royaltyAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint96",
+            "name": "numerator",
+            "type": "uint96"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "fixedSupply",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "nonce",
+            "type": "uint256"
+          }
+        ],
+        "name": "CreateFixedTrait",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "collectionName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "collectionSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "royaltyAddress_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint96",
+            "name": "numerator_",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fixedSupply_",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "parentBaseUri_",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nonce",
+            "type": "uint256"
+          }
+        ],
+        "name": "createFixedTraitsCollection",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_user",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_marketplace",
+            "type": "address"
+          }
+        ],
+        "name": "NotMarketplace",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "collectionAddress_",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256[]",
+            "name": "traitIds",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "CompileNewNft",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "collection",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "nonce",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address[]",
+            "name": "traitsAddress",
+            "type": "address[]"
+          }
+        ],
+        "name": "CreateComposableCollection",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "collectionAddress_",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256[]",
+            "name": "traitIds",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "DecompileNft",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "collectionAddress_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "tokenIds_",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "compileComponents",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "collectionAddress_",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId_",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "tokenIds_",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "createComposableNft",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "collectionName_",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "collectionSymbol_",
+            "type": "string"
+          },
+          {
+            "internalType": "address[]",
+            "name": "traitsAddress_",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "royaltyAddress_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint96",
+            "name": "numerator_",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fixedSupply_",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "parentBaseUri_",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "soulTokenUri_",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nonce",
+            "type": "uint256"
+          }
+        ],
+        "name": "createNewComposableCollection",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "collectionAddress_",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId_",
+            "type": "uint256"
+          }
+        ],
+        "name": "createTraitNft",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "collection_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId_",
+            "type": "uint256"
+          }
+        ],
+        "name": "decompileComponents",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "tokenIds",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "collection_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "traitId_",
+            "type": "uint256"
+          }
+        ],
+        "name": "getIdOfTraitNft",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "collection_",
+            "type": "address"
+          }
+        ],
+        "name": "getTraitsAddress",
+        "outputs": [
+          {
+            "internalType": "address[]",
+            "name": "traits",
+            "type": "address[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "collection_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId_",
+            "type": "uint256"
+          }
+        ],
+        "name": "getTraitsComponent",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "tokenIds",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "onERC721Received",
+        "outputs": [
+          {
+            "internalType": "bytes4",
+            "name": "",
+            "type": "bytes4"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_user",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_contractOwner",
+            "type": "address"
+          }
+        ],
+        "name": "NotContractOwner",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousMarketplace",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newMarketplace",
+            "type": "address"
+          }
+        ],
+        "name": "MarketplaceTransferred",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "marketplaceRole",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "marketplace_",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newMarketplace_",
+            "type": "address"
+          }
+        ],
+        "name": "transferMarketplaceRole",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "traitAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "burnable",
+            "type": "bool"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "collectionName",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "collectionSymbol",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "royaltyAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint96",
+            "name": "numerator",
+            "type": "uint96"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "nonce",
+            "type": "uint256"
+          }
+        ],
+        "name": "CreateMintableTrait",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "collectionName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "collectionSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "royaltyAddress_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint96",
+            "name": "numerator_",
+            "type": "uint96"
+          },
+          {
+            "internalType": "bool",
+            "name": "burnable_",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "parentBaseUri_",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nonce",
+            "type": "uint256"
+          }
+        ],
+        "name": "createMintableTraitsCollection",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "traitAddress",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "nonce",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "collectionName",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "string",
+            "name": "collectionSymbol",
+            "type": "string"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "royalTyAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint96",
+            "name": "numerator",
+            "type": "uint96"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "fixedSupply",
+            "type": "uint256"
+          }
+        ],
+        "name": "CreateSoulTrait",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "collectionName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "collectionSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "author_",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "royaltyAddress_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint96",
+            "name": "numerator_",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fixedSupply_",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenUri_",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nonce",
+            "type": "uint256"
+          }
+        ],
+        "name": "createSoulTraitsCollection",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "composableCollection_",
+            "type": "address"
+          }
+        ],
+        "name": "isAComposableCollection",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "traitCollection_",
+            "type": "address"
+          }
+        ],
+        "name": "isATraitCollection",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "deployedBytecode": "",
+    "bytecode": "",
+    "linkReferences": {},
+    "deployedLinkReferences": {}
+}
+  
